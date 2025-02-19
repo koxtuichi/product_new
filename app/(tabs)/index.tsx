@@ -7,6 +7,11 @@ import { ThemedText } from "@/components/ThemedText";
 import React from "react";
 
 export default function HomeScreen() {
+  // メールアドレスのバリデーションを追加
+  const validateEmail = (email: string) => {
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(email);
+  };
   return (
     <ScrollView contentContainerStyle={styles.container}>
       <ThemedView style={{ marginTop: 60 }} />
@@ -17,9 +22,19 @@ export default function HomeScreen() {
       <ThemedView style={{ padding: 10 }}>
         <ThemedText type="title">メールアドレス</ThemedText>
         <TextInput
+          style={{
+            height: 40,
+            borderColor: "gray",
+            borderWidth: 1,
+            padding: 5,
+            margin: 5,
+          }}
           placeholder="メールアドレスを入力してください"
-          keyboardType="email-address"
-          style={{ padding: 10, borderWidth: 1, borderColor: "#ccc" }}
+          onChangeText={(text) => {
+            if (!validateEmail(text)) {
+              alert("正しいメールアドレスを入力してください");
+            }
+          }}
         />
       </ThemedView>
     </ScrollView>
