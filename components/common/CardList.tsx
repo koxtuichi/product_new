@@ -10,27 +10,22 @@ export const CardList = () => {
     <ScrollView horizontal style={styles.container}>
       {/* Cardコンポーネントを配置する */}
       <Card
-        title="Title1"
         description="Description1"
         imageSource={require("../../assets/images/image_sample.png")}
       />
       <Card
-        title="Title1"
         description="Description1"
         imageSource={require("../../assets/images/image_sample.png")}
       />
       <Card
-        title="Title1"
         description="Description1"
         imageSource={require("../../assets/images/image_sample.png")}
       />
       <Card
-        title="Title1"
         description="Description1"
         imageSource={require("../../assets/images/image_sample.png")}
       />
       <Card
-        title="Title1"
         description="Description1"
         imageSource={require("../../assets/images/image_sample.png")}
       />

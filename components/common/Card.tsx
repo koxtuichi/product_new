@@ -2,11 +2,7 @@ import React from "react";
 import { View, Text, StyleSheet, Image } from "react-native";
 
 // 画像を表示できるカードを作成する
-export const Card = (props: {
-  title: string;
-  description: string;
-  imageSource: any;
-}) => {
+export const Card = (props: { description: string; imageSource: any }) => {
   return (
     <View style={styles.card}>
       <Image source={props.imageSource} style={styles.image} />
