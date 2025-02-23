@@ -12,7 +12,7 @@ export const Header = () => {
       </View>
       {/* 右側：アイコン群 */}
       <View style={styles.iconsContainer}>
-        <TouchableOpacity onPress={() => console.log("通知タップ")}>
+        <TouchableOpacity onPress={() => console.log("通知タップする")}>
           <Icon name="bell" size={24} color="#000" style={styles.icon} />
         </TouchableOpacity>
         <TouchableOpacity onPress={() => console.log("ブックマークタップ")}>
