@@ -8,7 +8,7 @@ export const Header = () => {
     <View style={styles.headerContainer}>
       {/* ロゴ */}
       <View style={styles.logoContainer}>
-        <ThemedText>LOGO</ThemedText>
+        {/* <ThemedText>LOGO</ThemedText> */}
       </View>
       {/* 右側：アイコン群 */}
       <View style={styles.iconsContainer}>
