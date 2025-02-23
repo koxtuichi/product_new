@@ -12,14 +12,8 @@ export const Header = () => {
   return (
     <View style={styles.headerContainer}>
       {/* ロゴ */}
-      <View style={styles.logoContainer}>
-        {/* <ThemedText>LOGO</ThemedText> */}
-      </View>
+      <View style={styles.logoContainer}></View>
       {/* メールアドレス入力項目 */}
-      <View>
-        <ThemedText>メールアドレス</ThemedText>
-        <ThemedText>{validateEmail("")}</ThemedText>
-      </View>
       {/* 右側：アイコン群 */}
       <View style={styles.iconsContainer}>
         <TouchableOpacity onPress={() => console.log("通知タップする")}>
