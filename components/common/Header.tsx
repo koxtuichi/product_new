@@ -4,11 +4,21 @@ import Icon from "react-native-vector-icons/FontAwesome";
 import { ThemedText } from "./ThemedText";
 
 export const Header = () => {
+  //メールアドレスのバリデーション
+  const validateEmail = (email: string) => {
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(email);
+  };
   return (
     <View style={styles.headerContainer}>
       {/* ロゴ */}
       <View style={styles.logoContainer}>
         {/* <ThemedText>LOGO</ThemedText> */}
+      </View>
+      {/* メールアドレス入力項目 */}
+      <View>
+        <ThemedText>メールアドレス</ThemedText>
+        <ThemedText>{validateEmail("")}</ThemedText>
       </View>
       {/* 右側：アイコン群 */}
       <View style={styles.iconsContainer}>
